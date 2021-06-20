@@ -36,6 +36,15 @@ body {
 .nav-bg {
     background-color: var(--secundario);
 }
-/* .navegacion-principal{
-  
-} */
+
+.navegacion-principal{
+  padding: 1rem;
+  display: flex; /* Habilita flex, se habilitan nuevas propiedades */
+  display: row; /* Indicar orientación*/
+  justify-content: space-between; /* Trabaja horizontalmente*/
+}
+
+.navegacion-principal a {
+  color: var(--blanco);
+  text-decoration: none;
+}
