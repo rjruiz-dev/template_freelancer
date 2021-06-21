@@ -5,13 +5,15 @@
     --primario: #ffc107;
     --secundario: #0097a7;
     --gris: #757575;
+    --grisClaro: #DFE9F3
 
     
 }
 
+/* Globales */
 html {
     font-size: 62.5%;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Hack para Box Model*/
 }
 
 /* Respeta las medidas de la caja box model */
@@ -22,8 +24,38 @@ html {
 body {
     font-size: 16px; /* 1rem = 10px*/
     font-family: 'Krub', sans-serif; /* aplica a todos los elementos */
+    
+    /* Degradado en css */
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%);
 }
 
+.contenedor {
+    max-width: 120rem;/* Toma 1200px como max y solamente si hay ese espacio disponible */
+    margin: 0 auto;
+
+}
+
+.boton {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+}
+
+@media (min-width: 480px) {
+    .boton {
+        width: auto; /* Permite resetear las dimensiones del boton */
+    }
+}
+
+/* Tipografia */
 h1 {
     font-size: 3.8rem;   
 }
@@ -40,16 +72,12 @@ h1,h2,h3 {
     text-align: center;
 }
 
+/* Titulos */
 .titulo span {
     font-size: 2rem;
 }
 
-.contenedor {
-    max-width: 120rem;/* Toma 1200px como max y solamente si hay ese espacio disponible */
-    margin: 0 auto;
-
-}
-
+/* Navegacion principal */
 .nav-bg {
     background-color: var(--secundario);
 }
@@ -87,6 +115,7 @@ h1,h2,h3 {
     color: var(--oscuro);
 }   
 
+/* Hero */
 .hero {
     background-image: url(../img/hero.jpg);
     background-repeat: no-repeat; /* No repite la imagen */
@@ -111,5 +140,5 @@ h1,h2,h3 {
 
 .contenido-hero h2,
 .contenido-hero p {
-    color: var;
+    color: var(--blanco);
 }
